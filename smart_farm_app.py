@@ -95,6 +95,9 @@ def display_chart(data):
 
 def main():
     initialize_app()
+    with open("log.txt", "a") as f:
+    f.write(f"[{datetime.now()}] User clicked start\n")
+
 
     # Write initial test data to Firebase (for demonstration)
     #db.child("sensors").set({"temperature": 28.5, "humidity": 180, "Light": 458})
